@@ -18,14 +18,14 @@
                 },false);            
                 
                 
-                setTimeout(function(){ 
+//                 setTimeout(function(){ 
                     //var theIframe = $("#loenberegner").get(0);
                     var theIframe = document.getElementById("loenberegner");
                     console.log(theIframe);
                     theIframe.contentWindow.postMessage('Message from github', target);
                     theIframe.contentWindow.postMessage('CA_ID = 120300402340', target);
                     console.log('posted message');
-                }, 1000);
+//                 }, 1000);
             });
             
         </script>
