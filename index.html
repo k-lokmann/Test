@@ -13,8 +13,9 @@
                 	    $('#messages').append($('<div class="msg">message not acceptet from target ' + event.origin + '</div>'));
                 	} else {
                         console.log($('#messages'));
-
-                	    $('#messages').append($('<div class="msg>it works!!! data = ' + event.data + '</div>'));
+                        var msg = $('<div class="msg>it works!!! data = ' + event.data + '</div>');
+                        console.log(msg);
+                	    $('#messages').append(msg);
                         var theIframe = $("#loenberegner").attr('height', event.data);  
                         
                          var theIframe = document.getElementById("loenberegner");
