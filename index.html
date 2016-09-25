@@ -8,7 +8,7 @@
         <script>
             var origin = "https://k-lokmann.github.io", caller = 'https://www.abovertoves.dk';
             $(function() {
-                var theIframe = $("#loenberegner");
+                var theIframe = $("#loenberegner").get(0);
                 theIframe.contentWindow.postMessage('Message from github', origin);
             });
             
