@@ -17,6 +17,7 @@
                 	if(event.origin !== target) {
                 	    $('body').append('<div class="msg">message not acceptet from target ' + event.origin + '</div>');
                 	} else {
+                        console.log("msg = " + '<div class="msg>it works!!! data = ' + event.data + '</div>');
                 	    $('body').append('<div class="msg>it works!!! data = ' + event.data + '</div>');
                         var theIframe = $("#loenberegner").attr('height', event.data);  
                         
