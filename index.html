@@ -5,18 +5,19 @@
         <meta charset="windows-1252">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+        <style>
+            .msg {
+                float: left;
+            }
+        </style>
         <script>
             var origin = "https://k-lokmann.github.io", target = 'https://www.abovertoves.dk';
             $(function() {
                 window.addEventListener('message',function(event) {
                 	if(event.origin !== target) {
-                	    $('#messages').append($('<div class="msg">message not acceptet from target ' + event.origin + '</div>'));
+                	    $('body').append('<div class="msg">message not acceptet from target ' + event.origin + '</div>');
                 	} else {
-                        console.log($('#messages'));
-                        var msg = $('<div class="msg>it works!!! data = ' + event.data + '</div>');
-                         console.log('<div class="msg>it works!!! data = ' + event.data + '</div>');
-                        console.log(msg);
-                	    $('body #messages').append('<div class="msg>it works!!! data = ' + event.data + '</div>');
+                	    $('body').append('<div class="msg>it works!!! data = ' + event.data + '</div>');
                         var theIframe = $("#loenberegner").attr('height', event.data);  
                         
                          var theIframe = document.getElementById("loenberegner");
