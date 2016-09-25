@@ -12,14 +12,14 @@
                 	if(event.origin !== target) {
                 	    $('#messages').append('<div class="msg">message not acceptet from target ' + event.origin + '</div>');
                 	} else {
+                        console.log($('#messages'));
+
                 	    $('#messages').append('<div class="msg>it works!!! data = ' + event.data + '</div>');
                         var theIframe = $("#loenberegner").attr('height', event.data);  
                         
                          var theIframe = document.getElementById("loenberegner");
-                        console.log(theIframe);
                         theIframe.contentWindow.postMessage('Message from github', target);
                         theIframe.contentWindow.postMessage('CA_ID = 120300402340', target);
-                        console.log('posted message');
                 	}
                 	
                 },false);            
