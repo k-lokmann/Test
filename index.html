@@ -5,12 +5,6 @@
         <meta charset="windows-1252">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
-<!--         <style>
-            .msg {
-                float: none;
-                clear: both;
-            }
-        </style> -->
         <script>
             var origin = "https://k-lokmann.github.io", target = 'https://www.abovertoves.dk';
             $(function() {
@@ -29,7 +23,7 @@
                 	
                 },false);            
                 
-                $("div").first().html($("div").first().text() + '<b>'  + location.protocol+'//'+location.hostname + '</b>');
+                $("h2").first().html($("h2").first().text() + '<b>'  + location.protocol+'//'+location.hostname + '</b>');
 //                 setTimeout(function(){ 
 //                     //var theIframe = $("#loenberegner").get(0);
 //                     var theIframe = document.getElementById("loenberegner");
@@ -43,7 +37,7 @@
         </script>
     </head>
     <body>
-        <div>This is: </div>
+        <h2>This is: </h2>
         <br>
         <div style="float: left">
             <iframe id="loenberegner" src="https://www.abovertoves.dk/TestFrame.html?test=5" width="500" height="500"></iframe>
