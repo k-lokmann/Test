@@ -1,11 +1,20 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <title>Test af iframe</title>
         <meta charset="windows-1252">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+        <script>
+            var origin = "https://k-lokmann.github.io", caller = 'https://www.abovertoves.dk';
+            $(function() {
+                var theIframe = $("#loenberegner");
+                theIframe.contentWindow.postMessage('Message from github', origin);
+            });
+            
+        </script>
     </head>
     <body>
-        <iframe src="https://www.abovertoves.dk/TestFrame.html" width="200" height="500"></iframe>
+        <iframe id="loenberegner" src="https://www.abovertoves.dk/TestFrame.html" width="200" height="500"></iframe>
     </body>
 </html>
