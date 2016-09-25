@@ -6,14 +6,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
         <script>
-            var origin = "https://k-lokmann.github.io", caller = 'https://www.abovertoves.dk';
+            var origin = "https://k-lokmann.github.io", target = 'https://www.abovertoves.dk';
             $(function() {
                 setTimeout(function(){ 
-                    alert("Hello"); 
                     //var theIframe = $("#loenberegner").get(0);
                     var theIframe = document.getElementById("loenberegner");
                     console.log(theIframe);
-                    theIframe.contentWindow.postMessage('Message from github', caller);
+                    theIframe.contentWindow.postMessage('Message from github', target);
                     console.log('posted message');
                 }, 1000);
             });
