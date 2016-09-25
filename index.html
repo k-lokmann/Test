@@ -9,6 +9,7 @@
             var origin = "https://k-lokmann.github.io", caller = 'https://www.abovertoves.dk';
             $(function() {
                 var theIframe = $("#loenberegner").get(0);
+                console.log(theIframe);
                 theIframe.contentWindow.postMessage('Message from github', origin);
             });
             
