@@ -24,14 +24,7 @@
                 },false);            
                 
                 $("h2").first().html($("h2").first().text() + '<b>'  + location.protocol+'//'+location.hostname + '</b>');
-//                 setTimeout(function(){ 
-//                     //var theIframe = $("#loenberegner").get(0);
-//                     var theIframe = document.getElementById("loenberegner");
-//                     console.log(theIframe);
-//                     theIframe.contentWindow.postMessage('Message from github', target);
-//                     theIframe.contentWindow.postMessage('CA_ID = 120300402340', target);
-//                     console.log('posted message');
-//                 }, 1000);
+
             });
             
         </script>
@@ -42,6 +35,6 @@
         <div style="float: left">
             <iframe id="loenberegner" src="https://www.abovertoves.dk/TestFrame.html?test=5" width="500" height="500"></iframe>
         </div>
-        <div id="msgs" style="float: left; margin-left: 10px; padding 10px; border: 1px solid grey"></div>
+        <div id="msgs" style="float: left; margin-left: 10px; padding: 10px; border: 1px solid grey"></div>
      </body>
 </html>
