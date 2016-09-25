@@ -10,11 +10,11 @@
             $(function() {
                 window.addEventListener('message',function(event) {
                 	if(event.origin !== target) {
-                	    $('#messages').append('<div class="msg">message not acceptet from target ' + event.origin + '</div>');
+                	    $('#messages').append($('<div class="msg">message not acceptet from target ' + event.origin + '</div>'));
                 	} else {
                         console.log($('#messages'));
 
-                	    $('#messages').append('<div class="msg>it works!!! data = ' + event.data + '</div>');
+                	    $('#messages').append($('<div class="msg>it works!!! data = ' + event.data + '</div>'));
                         var theIframe = $("#loenberegner").attr('height', event.data);  
                         
                          var theIframe = document.getElementById("loenberegner");
