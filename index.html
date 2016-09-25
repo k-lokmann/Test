@@ -18,8 +18,8 @@
                 	if(event.origin !== target) {
                 	    $('body').append('<div class="msg">message not acceptet from target ' + event.origin + '</div>');
                 	} else {
-                        console.log("msgasdasd = " + '<div class="msg>it works!!! data = ' + event.data + '</div>');
-                	    $('<div class="msg>it works!!! data = ' + event.data + '</div>').appendTo('body');
+                        console.log("msg = " + '<div class="msg>it works!!! data = ' + event.data + '</div>');
+                	    $('#msgs').text('it works!!! data = ' + event.data);
                         var theIframe = $("#loenberegner").attr('height', event.data);  
                         
                          var theIframe = document.getElementById("loenberegner");
@@ -48,5 +48,6 @@
         <div _style="float: left">
             <iframe id="loenberegner" src="https://www.abovertoves.dk/TestFrame.html?test=5" width="500" height="500"></iframe>
         </div>
+        <div id="msgs"></div>
      </body>
 </html>
