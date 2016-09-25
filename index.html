@@ -6,8 +6,18 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
         <script>
-            var origin = "https://k-lokmann.github.io", target = 'https://www.google.com';
+            var origin = "https://k-lokmann.github.io", target = 'https://www.abovertoves.dk';
             $(function() {
+                window.addEventListener('message',function(event) {
+                	if(event.origin !== target) {
+                	    $('body').append('<div>message not acceptet from target ' + event.origin + '</div>');
+                	} else {
+                	    $('body').append('<div>it works!!! data = ' + event.data + '</div>');
+                	}
+                	
+                },false);            
+                
+                
                 setTimeout(function(){ 
                     //var theIframe = $("#loenberegner").get(0);
                     var theIframe = document.getElementById("loenberegner");
