@@ -33,13 +33,14 @@
     <body>
         <iframe id="loenberegner" src="https://www.abovertoves.dk/TestFrame.html?test=5" width="200" height="500"></iframe>
         <script>
+            var origin = "https://k-lokmann.github.io", target = 'https://www.abovertoves.dk';
 //setTimeout(function(){ 
                     //var theIframe = $("#loenberegner").get(0);
                     var theIframe = document.getElementById("loenberegner");
                     console.log(theIframe);
                     theIframe.contentWindow.postMessage('Message from github', target);
                     theIframe.contentWindow.postMessage('CA_ID = 120300402340', target);
-                    console.log('posted message');
+                    console.log('posted messages');
                 //}, 1000);
             });
         </script>
