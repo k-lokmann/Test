@@ -18,7 +18,22 @@
                 },false);            
                 
                 
-                //setTimeout(function(){ 
+//                 setTimeout(function(){ 
+//                     //var theIframe = $("#loenberegner").get(0);
+//                     var theIframe = document.getElementById("loenberegner");
+//                     console.log(theIframe);
+//                     theIframe.contentWindow.postMessage('Message from github', target);
+//                     theIframe.contentWindow.postMessage('CA_ID = 120300402340', target);
+//                     console.log('posted message');
+//                 }, 1000);
+            });
+            
+        </script>
+    </head>
+    <body>
+        <iframe id="loenberegner" src="https://www.abovertoves.dk/TestFrame.html?test=5" width="200" height="500"></iframe>
+        <script>
+//setTimeout(function(){ 
                     //var theIframe = $("#loenberegner").get(0);
                     var theIframe = document.getElementById("loenberegner");
                     console.log(theIframe);
@@ -27,10 +42,6 @@
                     console.log('posted message');
                 //}, 1000);
             });
-            
         </script>
-    </head>
-    <body>
-        <iframe id="loenberegner" src="https://www.abovertoves.dk/TestFrame.html?test=5" width="200" height="500"></iframe>
     </body>
 </html>
