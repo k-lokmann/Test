@@ -8,11 +8,14 @@
         <script>
             var origin = "https://k-lokmann.github.io", caller = 'https://www.abovertoves.dk';
             $(function() {
-                //var theIframe = $("#loenberegner").get(0);
-                var theIframe = document.getElementById("loenberegner");
-                console.log(theIframe);
-                theIframe.contentWindow.postMessage('Message from github', origin);
-                console.log('posted message');
+                setTimeout(function(){ 
+                    alert("Hello"); 
+                    //var theIframe = $("#loenberegner").get(0);
+                    var theIframe = document.getElementById("loenberegner");
+                    console.log(theIframe);
+                    theIframe.contentWindow.postMessage('Message from github', origin);
+                    console.log('posted message');
+                }, 1000);
             });
             
         </script>
